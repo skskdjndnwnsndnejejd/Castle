@@ -60,14 +60,6 @@ async function saveData(data) {
 }
 
 // Utilities
-function ensureUserObj(data, uid, username = null) {
-  const k = String(uid);
-  if (!data.users[k]) {
-    data.users[k] = { username: username || null, balance: 0.0 };
-  } else if (username) {
-    data.users[k].username = username;
-  }
-}
 
 function genDealId() {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
